@@ -200,6 +200,55 @@ class DetailScreen extends StatelessWidget {
                       decoration: BoxDecoration(
                           color: Colors.white.withOpacity(0.96),
                           borderRadius: BorderRadius.circular(30)),
+                      child: Padding(
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 10, vertical: 15),
+                        child: Column(
+                            mainAxisSize: MainAxisSize.min,
+                            crossAxisAlignment: CrossAxisAlignment.end,
+                            children: [
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Image.asset(
+                                    'lib/assets/ethereum.png',
+                                    scale: 20,
+                                  ),
+                                  SizedBox(
+                                    width: 8,
+                                  ),
+                                  Text(
+                                    "Floor price",
+                                    style:
+                                        TextStyle(fontWeight: FontWeight.w500),
+                                  )
+                                ],
+                              ),
+                              SizedBox(
+                                height: 16,
+                              ),
+                              Container(
+                                height: 40,
+                                width: 70,
+                                decoration: BoxDecoration(
+                                    color: Colors.orange,
+                                    borderRadius: BorderRadius.circular(20)),
+                                child: Center(
+                                    child: Text(
+                                  '+ 0.34',
+                                  style: TextStyle(
+                                      fontSize: 17,
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold),
+                                )),
+                              ),
+                              Text(
+                                '3.52',
+                                style: TextStyle(
+                                    fontSize: 50, fontWeight: FontWeight.w500),
+                              ),
+                            ]),
+                      ),
                     ),
                     SizedBox(
                       width: 10,
@@ -210,9 +259,123 @@ class DetailScreen extends StatelessWidget {
                       decoration: BoxDecoration(
                           color: Colors.black.withOpacity(0.5),
                           borderRadius: BorderRadius.circular(30)),
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 10, vertical: 15),
+                        child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.end,
+                            children: [
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Icon(
+                                    Icons.group_outlined,
+                                    color: Colors.white,
+                                    size: 20,
+                                  ),
+                                  SizedBox(
+                                    width: 8,
+                                  ),
+                                  Text(
+                                    "Sales",
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.w500,
+                                        color: Colors.white),
+                                  )
+                                ],
+                              ),
+                              SizedBox(
+                                height: 16,
+                              ),
+                              Container(
+                                height: 40,
+                                width: 70,
+                                decoration: BoxDecoration(
+                                    color: Colors.orange,
+                                    borderRadius: BorderRadius.circular(20)),
+                                child: Center(
+                                    child: Text(
+                                  '+ 42',
+                                  style: TextStyle(
+                                      fontSize: 17,
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold),
+                                )),
+                              ),
+                              Text(
+                                '456',
+                                style: TextStyle(
+                                  fontSize: 50,
+                                  fontWeight: FontWeight.w500,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ]),
+                      ),
                     )
                   ]),
-                ))
+                )),
+            Positioned(
+                bottom: 35,
+                left: 10,
+                child: Container(
+                  height: screenwidth * 0.2,
+                  width: screenwidth * 0.4,
+                  padding: EdgeInsets.all(18),
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(40),
+                      color: Colors.black.withOpacity(0.45)),
+                  child: Center(
+                      child: Row(
+                    children: [
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Image.asset('lib/assets/ethereum.png'),
+                      SizedBox(
+                        width: 5,
+                      ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            '758',
+                            style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white.withOpacity(0.9)),
+                          ),
+                          SizedBox(
+                            height: 3,
+                          ),
+                          Text(
+                            'Volume',
+                            style: TextStyle(
+                                fontSize: 13,
+                                fontWeight: FontWeight.w300,
+                                color: Colors.white.withOpacity(0.8)),
+                          )
+                        ],
+                      )
+                    ],
+                  )),
+                )),
+            Positioned(
+                left: screenwidth * 0.38,
+                bottom: 35,
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).pop();
+                  },
+                  child: Container(
+                    height: screenwidth * 0.2,
+                    width: screenwidth * 0.2,
+                    padding: EdgeInsets.all(18),
+                    decoration: BoxDecoration(
+                        shape: BoxShape.circle, color: Colors.white),
+                    child: Center(child: Image.asset('lib/assets/c.png')),
+                  ),
+                )),
           ],
         ),
       ),
